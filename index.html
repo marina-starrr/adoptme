@@ -28,12 +28,6 @@
         <li><a href="#contact" class="nav-link">Контакти</a></li>
     </ul>
 </nav>
-<!-- Додайте цей HTML для бургер-меню після навігації -->
-<div class="burger-menu" id="burgerMenu">
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
         <div class="header-right">
             <a href="#" id="supportBtn" class="support-btn">Підтримати</a>
 <div id="donationModal" class="modal">
@@ -641,57 +635,7 @@
             initializeHearts();
             renderReviews();
         });
-
-/*==============================================================*/
-// Функція для бургер-меню
-document.getElementById('burgerMenu').addEventListener('click', function() {
-    const navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.toggle('active');
-});
-
-// Закриття меню при кліку на посилання
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.nav-menu').classList.remove('active');
-    });
-});
-
-// Оптимізація для мобільних пристроїв - запобігання масштабуванню при фокусі
-document.addEventListener('DOMContentLoaded', function() {
-    let viewport = document.querySelector('meta[name="viewport"]');
-    
-    if (viewport) {
-        function preventZoom() {
-            viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
-            setTimeout(function() {
-                viewport.content = 'width=device-width, initial-scale=1.0';
-            }, 300);
-        }
-        
-        const inputs = document.querySelectorAll('input, textarea, select');
-        inputs.forEach(input => {
-            input.addEventListener('focus', preventZoom);
-        });
-    }
-});
-
-// Плавна прокрутка для всіх браузерів
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 70,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
 </script>
 </body>
+
 </html>
