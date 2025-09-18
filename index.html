@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Me - Притулок для тварин</title>
+    <link rel="icon" href="lapka.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <div class="background-paws">
+        <div class="paw paw-1"></div>
+        <div class="paw paw-2"></div>
+        <div class="paw paw-3"></div>
+        <div class="paw paw-4"></div>
+    </div>
+<!--хедер-->
+    <header class="header" id="home">
+        <div class="header-left">
+            <img src="logo.png" alt="Adopt Me Logo" class="logo-img">
+        </div>
+        <nav>
+    <ul class="nav-menu">
+        <li><a href="#top" class="nav-link">Головна</a></li>
+        <li><a href="#pets" class="nav-link">Тварини</a></li>
+        <li><a href="#about" class="nav-link">Про нас</a></li>
+        <li><a href="#review" class="nav-link">Відгуки</a></li>
+        <li><a href="#contact" class="nav-link">Контакти</a></li>
+    </ul>
+</nav>
+<!-- Додайте цей HTML для бургер-меню після навігації -->
+<div class="burger-menu" id="burgerMenu">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+        <div class="header-right">
+            <a href="#" id="supportBtn" class="support-btn">Підтримати</a>
+<div id="donationModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 class="donation-title">Один донат — одне врятоване життя</h2>
+    <p class="donation-text">
+        Кожна гривня наближає наших підопічних до щасливого майбутнього.
+        Відскануйте QR-код, щоб нагодувати, обігріти та надати медичну допомогу
+        тим, хто цього найбільше потребує.
+    </p>
+    <img src="qr.jpg" alt="QR-код для донату" class="qr-code">
+  </div>
+</div>
+            <a href="#" id="showFavoritesBtn"><img src="obrane.png" alt="Обране" class="favorite-icon"></a>
+        </div>
+    </header>
+<!--основа-->
+    <main>
+        <section class="hero">
+            <div class="hero-left">
+                <div class="call-to-action-container">
+                    <div class="call-to-action">
+                        Знайди свого улюбленця
+                    </div>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-text">Врятовано понад</span>
+                        <span class="stat-number">42 000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-text">Знайшли люблячий дім</span>
+                        <span class="stat-number">17 000</span>
+                    </div>
+                    <div class="stat-item stats-full-width">
+                        <span class="stat-text">Одужали та реабілітувалися</span>
+                        <span class="stat-number">35 000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="image-slider">
+                    <img id="slider-image" src="dog.png" alt="dog" class="slider-image">
+                    <button class="slider-nav prev" onclick="changeImage(-1)">&lt;</button>
+                    <button class="slider-nav next" onclick="changeImage(1)">&gt;</button>
+                    <div class="cta-text-right">
+                        Ці цифри ростуть з кожним днем, стань частиною нашої родини!
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--про нас-->
+        <section class="about-us" id="about">
+            <div class="about-us-relative-wrapper">
+                <div class="adopt-me-title-block">
+                    <div class="adopt-me-title">adopt me</div>
+                    <div class="adopt-me-title-reflection">adopt me</div>
+                </div>
+                <div class="overlay-text-container">
+                    Ми не просто притулок, а дім для тих, хто втратив усе. Ми надаємо прихисток бездомним тваринам, що потребують лікування, любові та догляду.
+                </div>    
+                <img src="1.png" alt="Зображення 1" class="image-1-positioned">
+                <img src="2.png" alt="Зображення 2" class="image-2-positioned">
+                <div class="image-12-positioned">
+                    Наша місія — не тільки врятувати, а й знайти для кожного пухнастого друга люблячу сім'ю.
+                </div>
+                <img src="4.png" alt="Зображення 4" class="image-4-positioned">
+                <div class="image-13-positioned">
+                    Кожна тварина, яка потрапляє до нас, отримує повний ветеринарний огляд, необхідні щеплення та стерилізацію.
+                </div>
+                <img src="3.png" alt="Зображення 3" class="image-3-positioned">
+                <div class="image-14-positioned">
+                    Наші волонтери щодня дарують їм свою турботу, займаються соціалізацією та підготовкою до життя в родині.
+                </div>
+                <img src="5.png" alt="Зображення 5" class="image-5-positioned">
+                <img src="6.png" alt="Зображення 6" class="image-6-positioned"> 
+                <div class="image-15-positioned">
+                    Завдяки вашій підтримці, ми даруємо їм другий шанс на щасливе життя. Допоможіть нам змінити їхню долю.
+                </div>
+            </div>
+        </section>
+<!--тварини-->
+        <section class="pets-section" id="pets">
+            <div class="pets-title-container">
+                Знайди свого найкращого друга
+            </div>
+            <div class="pet-grid">
+                <div class="pet-card" data-pet-id="nancy" data-pet-name="Ненсі" data-pet-image="ненсі.jpg" data-pet-age="9 місяців" data-pet-gender="дівчинка">
+                    <div class="pet-card-image-container">
+                        <img src="ненсі.jpg" alt="Ненсі" class="pet-card-image">
+                        <h3 class="pet-name">Ненсі</h3>
+                        <img src="heart.png" alt="Додати до улюблених" class="favorite-heart">
+                    </div>
+                    <div class="pet-card-content">
+                        <div class="pet-info-row">
+                            <div class="pet-info">
+                                <img src="1age.png" alt="Вік"> 9 місяців
+                            </div>
+                            <div class="pet-info">
+                                <img src="1стать.png" alt="Стать"> дівчинка
+                            </div>
+                        </div>
+                        <div class="pet-info-chatacter"> 
+                                 #добра #розумна #слухняна
+                            </div>
+                    </div>
+                </div>
+                <div class="pet-card" data-pet-id="kamila" data-pet-name="Каміла" data-pet-image="каміла.jpg" data-pet-age="1 рік" data-pet-gender="дівчинка">
+                    <div class="pet-card-image-container">
+                        <img src="каміла.jpg" alt="Каміла" class="pet-card-image">
+                        <h3 class="pet-name">Каміла</h3>
+                        <img src="heart.png" alt="Додати до улюблених" class="favorite-heart">
+                    </div>
+                    <div class="pet-card-content">
+                        <div class="pet-info-row">
+                            <div class="pet-info">
+                                <img src="1age.png" alt="Вік"> 1 рік
+                            </div>
+                            <div class="pet-info">
+                                <img src="1стать.png" alt="Стать"> дівчинка
+                            </div>
+                        </div>
+                        <div class="pet-info-chatacter"> 
+                                 #гарна #жвава #привітна
+                            </div>
+                    </div>
+                </div>
+                <div class="pet-card" data-pet-id="mars" data-pet-name="Марс" data-pet-image="марс.jpg" data-pet-age="6 місяців" data-pet-gender="хлопчик">
+                    <div class="pet-card-image-container">
+                        <img src="марс.jpg" alt="Марс" class="pet-card-image">
+                        <h3 class="pet-name">Марс</h3>
+                        <img src="heart.png" alt="Додати до улюблених" class="favorite-heart">
+                    </div>
+                    <div class="pet-card-content">
+                        <div class="pet-info-row">
+                            <div class="pet-info">
+                                <img src="1age.png" alt="Вік"> 6 місяців
+                            </div>
+                            <div class="pet-info">
+                                <img src="1стать.png" alt="Стать"> хлопчик
+                            </div>
+                        </div>
+                        <div class="pet-info-chatacter"> 
+                                 #милий #спокійний #дружелюбний
+                            </div>
+                    </div>
+                </div>
+                <div class="pet-card" data-pet-id="bagir" data-pet-name="Багір" data-pet-image="багір.jpg" data-pet-age="2 місяці" data-pet-gender="хлопчик">
+                    <div class="pet-card-image-container">
+                        <img src="багір.jpg" alt="Багір" class="pet-card-image">
+                        <h3 class="pet-name">Багір</h3>
+                        <img src="heart.png" alt="Додати до улюблених" class="favorite-heart">
+                    </div>
+                    <div class="pet-card-content">
+                        <div class="pet-info-row">
+                            <div class="pet-info">
+                                <img src="1age.png" alt="Вік"> 2 місяці
+                            </div>
+                            <div class="pet-info">
+                                <img src="1стать.png" alt="Стать"> хлопчик
+                            </div>
+                        </div>
+                        <div class="pet-info-chatacter"> 
+                                 #грайливий #слухняний #вірний
+                            </div>
+                    </div>
+                </div>
+                <div class="pet-card" data-pet-id="nutella" data-pet-name="Нутелла" data-pet-image="нутелла.jpg" data-pet-age="3 місяці" data-pet-gender="дівчинка">
+                    <div class="pet-card-image-container">
+                        <img src="нутелла.jpg" alt="Нутелла" class="pet-card-image">
+                        <h3 class="pet-name">Нутелла</h3>
+                        <img src="heart.png" alt="Додати до улюблених" class="favorite-heart">
+                    </div>
+                    <div class="pet-card-content">
+                        <div class="pet-info-row">
+                            <div class="pet-info">
+                                <img src="1age.png" alt="Вік"> 3 місяці
+                            </div>
+                            <div class="pet-info">
+                                <img src="1стать.png" alt="Стать"> дівчинка
+                            </div>
+                        </div>
+                        <div class="pet-info-chatacter"> 
+                                 #ніжна #дружелюбна #талановита
+                            </div>
+                    </div>
+                </div>
+                <div class="pet-card" data-pet-id="varka" data-pet-name="Варка" data-pet-image="варка.jpg" data-pet-age="2 роки" data-pet-gender="хлопчик">
+                    <div class="pet-card-image-container">
+                        <img src="варка.jpg" alt="Варка" class="pet-card-image">
+                        <h3 class="pet-name">Варка</h3>
+                        <img src="heart.png" alt="Додати до улюблених" class="favorite-heart">
+                    </div>
+                    <div class="pet-card-content">
+                        <div class="pet-info-row">
+                            <div class="pet-info">
+                                <img src="1age.png" alt="Вік"> 2 роки
+                            </div>
+                            <div class="pet-info">
+                                <img src="1стать.png" alt="Стать"> хлопчик
+                            </div>
+                        </div>
+                        <div class="pet-info-chatacter"> 
+                                 #хороший #спокійний #люблячий
+                            </div>
+                    </div>
+                </div>
+                <div class="pet-card" data-pet-id="zhuzha" data-pet-name="Жужа" data-pet-image="жужа.jpg" data-pet-age="13 років" data-pet-gender="дівчинка">
+                    <div class="pet-card-image-container">
+                        <img src="жужа.jpg" alt="Жужа" class="pet-card-image">
+                        <h3 class="pet-name">Жужа</h3>
+                        <img src="heart.png" alt="Додати до улюблених" class="favorite-heart">
+                    </div>
+                    <div class="pet-card-content">
+                        <div class="pet-info-row">
+                            <div class="pet-info">
+                                <img src="1age.png" alt="Вік"> 13 років
+                            </div>
+                            <div class="pet-info">
+                                <img src="1стать.png" alt="Стать"> дівчинка
+                            </div>
+                        </div>
+                        <div class="pet-info-chatacter"> 
+                                 #розумна #надійна #чудова
+                            </div>
+                    </div>
+                </div>
+                <div class="pet-card" data-pet-id="javelina" data-pet-name="Джавеліна" data-pet-image="джавеліна.jpg" data-pet-age="3 роки" data-pet-gender="дівчинка">
+                    <div class="pet-card-image-container">
+                        <img src="джавеліна.jpg" alt="Джавеліна" class="pet-card-image">
+                        <h3 class="pet-name">Джавеліна</h3>
+                        <img src="heart.png" alt="Додати до улюблених" class="favorite-heart">
+                    </div>
+                    <div class="pet-card-content">
+                        <div class="pet-info-row">
+                            <div class="pet-info">
+                                <img src="1age.png" alt="Вік"> 3 роки
+                            </div>
+                            <div class="pet-info">
+                                <img src="1стать.png" alt="Стать"> дівчинка
+                            </div>
+                        </div>
+                        <div class="pet-info-chatacter"> 
+                                 #мила гарна #слухняна
+                            </div>
+                    </div>
+                </div>
+                <div class="pet-card" data-pet-id="momo" data-pet-name="Момо" data-pet-image="момо.jpg" data-pet-age="2 роки" data-pet-gender="хлопчик">
+                    <div class="pet-card-image-container">
+                        <img src="момо.jpg" alt="Момо" class="pet-card-image">
+                        <h3 class="pet-name">Момо</h3>
+                        <img src="heart.png" alt="Додати до улюблених" class="favorite-heart">
+                    </div>
+                    <div class="pet-card-content">
+                        <div class="pet-info-row">
+                            <div class="pet-info">
+                                <img src="1age.png" alt="Вік"> 2 роки
+                            </div>
+                            <div class="pet-info">
+                                <img src="1стать.png" alt="Стать"> хлопчик
+                            </div>
+                        </div>
+                        <div class="pet-info-chatacter"> 
+                                 #талановита #гарна #грайлива
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--відгуки-->
+        <section class="reviews-section" id="review">
+            <div class="reviews-title-container">
+                <h2>Відгуки</h2>
+                <img src="2lapki.png" alt="Лапки" class="title-lapki">
+            </div>
+
+            <div class="reviews-content-wrapper">
+                <div class="review-card-container">
+                    <img src="catik.png" alt="Котик" class="cat-icon">
+                    <img src="dogik.png" alt="Собачка" class="dog-icon">
+
+                    <form id="review-form" class="review-form">
+                        <label for="nickname" class="form-label">Нікнейм</label>
+                        <input type="text" id="nickname" name="nickname" class="form-input" placeholder="Вкажіть своє ім'я..." required>
+                        
+                        <label for="review-text" class="form-label">Залиште відгук</label>
+                        <div class="submit-container">
+                            <textarea id="review-text" name="review-text" class="form-textarea" placeholder="Введіть текст..." required></textarea>
+                            <button type="submit" class="submit-btn">
+                                <img src="Send.png" alt="Відправити">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div id="reviews-list" class="review-card-list">
+                    </div>
+            </div>
+        </section>
+    </main>   
+<!--зв'язок-->
+<section class="contact-section" id="contact">
+    <div class="contact-header">
+        <img src="brush4.png" alt="Фон" class="header-brush">
+        <h2 class="header-text">Зворотній зв'язок</h2>
+    </div>
+<div class="contact-images-container">
+    <img src="catdog.png" alt="Call us" class="contact-image call-image">
+    <img src="line.png" alt="Line" class="contact-image line-image">
+</div>
+    <div class="contact-cards-container">
+        <div class="contact-card">
+            <div class="inner-card">
+                <div class="card-title-row">
+                    <img src="tele.png" alt="Іконка телефону" class="card-icon">
+                    <h3 class="card-title">Зателефонуйте нам</h3>
+                </div>
+                <p class="card-info">(+380) 98 532 32 52</p>
+                <p class="card-info">(+380) 63 123 21 31</p>
+            </div>
+        </div>
+        <div class="contact-card">
+            <div class="inner-card">
+                <div class="card-title-row">
+                    <img src="gps.png" alt="Іконка локації" class="card-icon">
+                    <h3 class="card-title">Відвідайте нас</h3>
+                </div>
+                <p class="card-info">Житомир, вул. Покровська, 96</p>
+                <p class="card-info">10031</p>
+            </div>
+        </div>
+        <div class="contact-card">
+            <div class="inner-card">
+                <div class="card-title-row">
+                    <img src="sms.png" alt="Іконка листа" class="card-icon">
+                    <h3 class="card-title">Напишіть нам</h3>
+                </div>
+                <p class="card-info">adoptme@gmail.com</p>
+                <p class="card-info">meadopt@ukr.net</p>
+            </div>
+        </div>
+        <div class="contact-card">
+            <div class="inner-card">
+                <div class="card-title-row">
+                    <img src="time.png" alt="Іконка годинника" class="card-icon">
+                    <h3 class="card-title">Години роботи</h3>
+                </div>
+                <p class="card-info">Пн-Пт: 08:30 – 16:30</p>
+                <p class="card-info">Сб-Нд: вихідний</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="support-block">
+            <h3 class="support-title">Підтримайте нас:</h3>
+            <div class="support-content">
+                <img src="qr.jpg" alt="QR-код для підтримки" class="qr-image">
+                <img src="33.png" alt="Зображення для підтримки" class="support-image">
+            </div>
+        </div>
+<!--футер-->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Adopt Me Logo" class="logo-img-footer">
+            <div class="logo-text">
+                <span>Дім, що чекає на</span>
+                <span>свого друга</span>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2025 adoptme</p>
+        </div>
+    </div>
+</footer>
+<!--кошик-->
+<div id="favoritesModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-header">
+            <h3>Обрані тварини</h3>
+        </div>
+        <div id="favoritePetsContainer" class="favorite-pets-container">
+            </div>
+        <div id="adoptBtnContainer" style="text-align: center; margin-top: 20px;">
+            <button id="adoptPetBtn" class="adopt-pet-btn">Прихистити</button>
+        </div>
+        <form id="adoptionForm" class="adoption-form" style="display: none;">
+            <h4>Форма заяви на прихисток</h4>
+            <input type="text" id="adopterName" placeholder="Ім'я" required>
+            <input type="text" id="adopterSurname" placeholder="Прізвище" required>
+            <input type="tel" id="adopterPhone" placeholder="Телефон" required inputmode="numeric" pattern="^0[0-9]{9}$">
+            <button type="submit" class="submit-adoption-btn">Подати заяву</button>
+            <button type="button" id="backToFavoritesBtn" class="back-to-favorites-btn">Назад</button>
+        </form>
+    </div>
+</div>
+   <script>
+// Донат
+        const supportBtn = document.getElementById("supportBtn");
+        const donationModal = document.getElementById("donationModal");
+        const closeDonat = donationModal.querySelector(".close-btn");
+        supportBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+           donationModal.style.display = "flex";
+        });
+        window.addEventListener("click", (event) => {
+             if (event.target === donationModal) {
+               donationModal.style.display = "none";
+        }
+        });
+        closeDonat.addEventListener("click", () => {
+          donationModal.style.display = "none";
+        });
+//слайдер
+        const images = ['dog.png', 'cat.png', 'dog2.png', 'cat2.png', 'dog3.png'];
+        let currentIndex = 0;
+        const sliderImage = document.getElementById('slider-image');
+//Кошик 
+        const modal = document.getElementById("favoritesModal");
+        const showFavoritesBtn = document.getElementById("showFavoritesBtn");
+        const closeFavoritesBtn = modal.querySelector(".close-btn");
+        const favoritePetsContainer = document.getElementById("favoritePetsContainer");
+        const petCards = document.querySelectorAll(".pet-card");
+        const reviewForm = document.getElementById('review-form');
+        const nicknameInput = document.getElementById('nickname');
+        const reviewTextInput = document.getElementById('review-text');
+        const reviewsList = document.getElementById('reviews-list');
+        const adoptBtnContainer = document.getElementById('adoptBtnContainer');
+        const adoptPetBtn = document.getElementById('adoptPetBtn');
+        const adoptionForm = document.getElementById('adoptionForm');
+        const backToFavoritesBtn = document.getElementById('backToFavoritesBtn');
+        function saveFavorites(favorites) {
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        }
+        function loadFavorites() {
+            const favorites = localStorage.getItem('favorites');
+            return favorites ? JSON.parse(favorites) : [];
+        }
+        function renderFavorites() {
+    const favorites = loadFavorites();
+    favoritePetsContainer.innerHTML = ''; 
+        if (favorites.length === 0) {
+        favoritePetsContainer.innerHTML = '<p style="text-align:center;">Список обраних тварин порожній.</p>';
+        adoptBtnContainer.style.display = "none";
+        return;
+    }
+    adoptBtnContainer.style.display = "block";   
+    favorites.forEach(pet => {
+        const card = document.createElement('div');
+        card.className = 'favorite-card';
+        card.innerHTML = `
+            <img src="${pet.image}" alt="${pet.name}" class="favorite-card-image">
+            <h4 class="favorite-card-name">${pet.name}</h4>
+            <button class="remove-favorite-btn" data-pet-id="${pet.id}">Прибрати</button>
+        `;
+        favoritePetsContainer.appendChild(card);
+    });
+}
+        function initializeHearts() {
+            const favorites = loadFavorites();
+            petCards.forEach(card => {
+                const heartIcon = card.querySelector('.favorite-heart');
+                const petId = card.dataset.petId;
+                const isFavorite = favorites.some(fav => fav.id === petId);     
+                if (isFavorite) {
+                    heartIcon.src = 'heart2.png';
+                } else {
+                    heartIcon.src = 'heart.png';
+                }
+            });
+        }
+        petCards.forEach(card => {
+            const heartIcon = card.querySelector('.favorite-heart');
+            const petId = card.dataset.petId;
+            const petName = card.dataset.petName;
+            const petImage = card.dataset.petImage;
+            heartIcon.addEventListener('click', (event) => {
+                event.stopPropagation();
+                let favorites = loadFavorites();
+                const isFavoriteNow = favorites.some(fav => fav.id === petId);
+                if (isFavoriteNow) {
+                    favorites = favorites.filter(fav => fav.id !== petId);
+                    saveFavorites(favorites);
+                    heartIcon.src = 'heart.png';
+                } else {
+                    const newFavorite = { id: petId, name: petName, image: petImage };
+                    favorites.push(newFavorite);
+                    saveFavorites(favorites);
+                    heartIcon.src = 'heart2.png';
+                }
+            });
+        });
+        adoptPetBtn.addEventListener('click', () => {
+           favoritePetsContainer.style.display = "none";
+        adoptBtnContainer.style.display = "none";
+           adoptionForm.style.display = "flex";
+        });
+        adoptionForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+        const name = document.getElementById('adopterName').value;
+        const surname = document.getElementById('adopterSurname').value;
+        const phone = document.getElementById('adopterPhone').value;
+        alert(`Дякуємо, ${name}! Ваша заява була успішно подана. Ми зв'яжемося з вами найближчим часом.`);  
+        saveFavorites([]);
+        initializeHearts();
+        adoptionForm.style.display = "none";
+        adoptionForm.reset();
+        favoritePetsContainer.style.display = "flex";
+        adoptBtnContainer.style.display = "none";
+        renderFavorites();
+     });
+        backToFavoritesBtn.addEventListener('click', () => {
+           adoptionForm.style.display = "none";
+           favoritePetsContainer.style.display = "flex";
+        adoptBtnContainer.style.display = "block";
+        });
+        showFavoritesBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            renderFavorites();
+            modal.style.display = "flex";
+        });
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+        closeFavoritesBtn.addEventListener('click', () => {
+           modal.style.display = "none";
+        });
+        favoritePetsContainer.addEventListener('click', (event) => {
+            if (event.target.classList.contains('remove-favorite-btn')) {
+                const petIdToRemove = event.target.dataset.petId;
+                let favorites = loadFavorites();
+                favorites = favorites.filter(fav => fav.id !== petIdToRemove);
+                saveFavorites(favorites);
+                const heartOnMainPage = document.querySelector(`.pet-card[data-pet-id="${petIdToRemove}"] .favorite-heart`);
+                if (heartOnMainPage) {
+                    heartOnMainPage.src = 'heart.png';
+                }              
+                renderFavorites();
+            }
+        });
+//відгуки
+       const initialReviews = [
+            { name: "Майкл Де Санта", date: "27.08.2025", text: "Забрали нашого улюбленця з притулку. Тварина здорова, доглянута, а персонал дуже допоміг з вибором. Безмежно вдячні за нашого нового члена сім'ї!" },
+            { name: "Хікару Накамура", date: "14.06.2025", text: "Притулок робить неймовірну справу! Вони рятують і лікують бездомних тварин, даруючи їм надію. Це приклад справжньої любові та відданості. Підтримайте їх!" }
+        ];
+        function getReviews() {
+            const reviews = localStorage.getItem('reviews');
+            if (reviews) {
+                return JSON.parse(reviews);
+            } else {
+                localStorage.setItem('reviews', JSON.stringify(initialReviews));
+                return initialReviews;
+            }
+        }
+        function saveReview(review) {
+            const reviews = getReviews();
+            reviews.unshift(review);
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+        }
+        function renderReviews() {
+            const reviews = getReviews();
+            reviewsList.innerHTML = '';     
+            reviews.forEach(review => {
+                const reviewCard = document.createElement('div');
+                reviewCard.className = 'review-card';
+                reviewCard.innerHTML = `
+                    <div class="review-header">
+                        <span class="review-name">${review.name}</span>
+                        <span class="review-date">${review.date}</span>
+                    </div>
+                    <p class="review-text">${review.text}</p>
+                `;
+                reviewsList.appendChild(reviewCard);
+            });
+        }
+        reviewForm.addEventListener('submit', (event) => {
+            event.preventDefault();   
+            const name = nicknameInput.value;
+            const text = reviewTextInput.value;
+            if (name && text) {
+                const today = new Date();
+                const date = `${today.getDate().toString().padStart(2, '0')}.${(today.getMonth() + 1).toString().padStart(2, '0')}.${today.getFullYear()}`;  
+                const newReview = { name, date, text };
+                saveReview(newReview);
+                renderReviews();   
+                nicknameInput.value = '';
+                reviewTextInput.value = '';
+            }
+        });
+//слайдер
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            sliderImage.src = images[currentIndex];
+        }
+//при завантаженні сторінки
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeHearts();
+            renderReviews();
+        });
+
+/*==============================================================*/
+// Функція для бургер-меню
+document.getElementById('burgerMenu').addEventListener('click', function() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+});
+
+// Закриття меню при кліку на посилання
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-menu').classList.remove('active');
+    });
+});
+
+// Оптимізація для мобільних пристроїв - запобігання масштабуванню при фокусі
+document.addEventListener('DOMContentLoaded', function() {
+    let viewport = document.querySelector('meta[name="viewport"]');
+    
+    if (viewport) {
+        function preventZoom() {
+            viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+            setTimeout(function() {
+                viewport.content = 'width=device-width, initial-scale=1.0';
+            }, 300);
+        }
+        
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', preventZoom);
+        });
+    }
+});
+
+// Плавна прокрутка для всіх браузерів
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 70,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
+</body>
+</html>
