@@ -425,8 +425,8 @@
             </div>
             <form id="adoptionForm" class="adoption-form" style="display: none;">
                 <h4>Форма заяви на прихисток</h4>
-                <input type="text" id="adopterName" placeholder="Ім'я" required>
-                <input type="text" id="adopterSurname" placeholder="Прізвище" required>
+                <input type="text" id="adopterName" placeholder="Ім'я" required maxlength="25">
+                <input type="text" id="adopterSurname" placeholder="Прізвище" required maxlength="25">
                 <input type="tel" id="adopterPhone" placeholder="Телефон" required inputmode="numeric" pattern="^0[0-9]{9}$">
                 <button type="submit" class="submit-adoption-btn">Подати заяву</button>
                 <button type="button" id="backToFavoritesBtn" class="back-to-favorites-btn">Назад</button>
