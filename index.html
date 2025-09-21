@@ -434,7 +434,7 @@
         </div>
     </div>
    <script>
-    // Донат
+// Донат
         const supportBtn = document.getElementById("supportBtn");
         const donationModal = document.getElementById("donationModal");
         const closeDonat = donationModal.querySelector(".close-btn");
@@ -643,8 +643,7 @@
             initializeHearts();
             renderReviews();
         });
-/*==============================================================*/
-// Додайте цей JavaScript для бургер-меню
+//випливаюче меню
         const hamburger = document.querySelector('.hamburger-menu');
         const navMenu = document.querySelector('.nav-menu');
         
@@ -652,14 +651,13 @@
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
-        // Закриття меню при кліку на посилання
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 hamburger.classList.remove('active');
             });
         });
-// Оптимізація для мобільних пристроїв - запобігання масштабуванню при фокусі
+// Оптимізація для мобільних пристроїв
 document.addEventListener('DOMContentLoaded', function() {
     let viewport = document.querySelector('meta[name="viewport"]');
     
