@@ -14,34 +14,42 @@
         <div class="paw paw-3"></div>
         <div class="paw paw-4"></div>
     </div>
-<!--хедер-->
+    <!--хедер-->
     <header class="header" id="home">
         <div class="header-left">
             <img src="logo.png" alt="Adopt Me Logo" class="logo-img">
         </div>
+        
+        <button class="hamburger-menu" aria-label="Відкрити меню">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        
         <nav>
-    <ul class="nav-menu">
-        <li><a href="#top" class="nav-link">Головна</a></li>
-        <li><a href="#pets" class="nav-link">Тварини</a></li>
-        <li><a href="#about" class="nav-link">Про нас</a></li>
-        <li><a href="#review" class="nav-link">Відгуки</a></li>
-        <li><a href="#contact" class="nav-link">Контакти</a></li>
-    </ul>
-</nav>
+            <ul class="nav-menu">
+                <li><a href="#top" class="nav-link">Головна</a></li>
+                <li><a href="#pets" class="nav-link">Тварини</a></li>
+                <li><a href="#about" class="nav-link">Про нас</a></li>
+                <li><a href="#review" class="nav-link">Відгуки</a></li>
+                <li><a href="#contact" class="nav-link">Контакти</a></li>
+            </ul>
+        </nav>
+        
         <div class="header-right">
             <a href="#" id="supportBtn" class="support-btn">Підтримати</a>
-<div id="donationModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2 class="donation-title">Один донат — одне врятоване життя</h2>
-    <p class="donation-text">
-        Кожна гривня наближає наших підопічних до щасливого майбутнього.
-        Відскануйте QR-код, щоб нагодувати, обігріти та надати медичну допомогу
-        тим, хто цього найбільше потребує.
-    </p>
-    <img src="qr.jpg" alt="QR-код для донату" class="qr-code">
-  </div>
-</div>
+            <div id="donationModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2 class="donation-title">Один донат — одне врятоване життя</h2>
+                    <p class="donation-text">
+                        Кожна гривня наближає наших підопічних до щасливого майбутнього.
+                        Відскануйте QR-код, щоб нагодувати, обігріти та надати медичну допомогу
+                        тим, хто цього найбільше потребує.
+                    </p>
+                    <img src="qr.jpg" alt="QR-код для донату" class="qr-code">
+                </div>
+            </div>
             <a href="#" id="showFavoritesBtn"><img src="obrane.png" alt="Обране" class="favorite-icon"></a>
         </div>
     </header>
@@ -312,11 +320,11 @@
 
                     <form id="review-form" class="review-form">
                         <label for="nickname" class="form-label">Нікнейм</label>
-                        <input type="text" id="nickname" name="nickname" class="form-input" placeholder="Вкажіть своє ім'я..." required>
+                        <input type="text" id="nickname" name="nickname" class="form-input" placeholder="Вкажіть своє ім'я..." required maxlength="20">
                         
                         <label for="review-text" class="form-label">Залиште відгук</label>
                         <div class="submit-container">
-                            <textarea id="review-text" name="review-text" class="form-textarea" placeholder="Введіть текст..." required></textarea>
+                            <textarea id="review-text" name="review-text" class="form-textarea" class="review-text" placeholder="Введіть текст..." required maxlength="500"></textarea>
                             <button type="submit" class="submit-btn">
                                 <img src="Send.png" alt="Відправити">
                             </button>
@@ -329,104 +337,104 @@
         </section>
     </main>   
 <!--зв'язок-->
-<section class="contact-section" id="contact">
-    <div class="contact-header">
-        <img src="brush4.png" alt="Фон" class="header-brush">
-        <h2 class="header-text">Зворотній зв'язок</h2>
+ <section class="contact-section" id="contact">
+        <div class="contact-header">
+            <img src="brush4.png" alt="Фон" class="header-brush">
+            <h2 class="header-text">Зворотній зв'язок</h2>
+        </div>
+        <div class="contact-images-container">
+            <img src="catdog.png" alt="Call us" class="contact-image call-image">
+            <img src="line.png" alt="Line" class="contact-image line-image">
+        </div>  
+        <div class="contact-cards-container">
+            <div class="contact-card">
+                <div class="inner-card">
+                    <div class="card-title-row">
+                        <img src="tele.png" alt="Іконка телефону" class="card-icon">
+                        <h3 class="card-title">Зателефонуйте нам</h3>
+                    </div>
+                    <p class="card-info">(+380) 98 532 32 52</p>
+                    <p class="card-info">(+380) 63 123 21 31</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="inner-card">
+                    <div class="card-title-row">
+                        <img src="gps.png" alt="Іконка локації" class="card-icon">
+                        <h3 class="card-title">Відвідайте нас</h3>
+                    </div>
+                    <p class="card-info">Житомир, вул. Покровська, 96</p>
+                    <p class="card-info">10031</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="inner-card">
+                    <div class="card-title-row">
+                        <img src="sms.png" alt="Іконка листа" class="card-icon">
+                        <h3 class="card-title">Напишіть нам</h3>
+                    </div>
+                    <p class="card-info">adoptme@gmail.com</p>
+                    <p class="card-info">meadopt@ukr.net</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="inner-card">
+                    <div class="card-title-row">
+                        <img src="time.png" alt="Іконка годинника" class="card-icon">
+                        <h3 class="card-title">Години роботи</h3>
+                    </div>
+                    <p class="card-info">Пн-Пт: 08:30 – 16:30</p>
+                    <p class="card-info">Сб-Нд: вихідний</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="support-block">
+        <h3 class="support-title">Підтримайте нас:</h3>
+        <div class="support-content">
+            <img src="qr.jpg" alt="QR-код для підтримки" class="qr-image">
+            <img src="33.png" alt="Зображення для підтримки" class="support-image">
+        </div>
     </div>
-<div class="contact-images-container">
-    <img src="catdog.png" alt="Call us" class="contact-image call-image">
-    <img src="line.png" alt="Line" class="contact-image line-image">
-</div>
-    <div class="contact-cards-container">
-        <div class="contact-card">
-            <div class="inner-card">
-                <div class="card-title-row">
-                    <img src="tele.png" alt="Іконка телефону" class="card-icon">
-                    <h3 class="card-title">Зателефонуйте нам</h3>
-                </div>
-                <p class="card-info">(+380) 98 532 32 52</p>
-                <p class="card-info">(+380) 63 123 21 31</p>
-            </div>
-        </div>
-        <div class="contact-card">
-            <div class="inner-card">
-                <div class="card-title-row">
-                    <img src="gps.png" alt="Іконка локації" class="card-icon">
-                    <h3 class="card-title">Відвідайте нас</h3>
-                </div>
-                <p class="card-info">Житомир, вул. Покровська, 96</p>
-                <p class="card-info">10031</p>
-            </div>
-        </div>
-        <div class="contact-card">
-            <div class="inner-card">
-                <div class="card-title-row">
-                    <img src="sms.png" alt="Іконка листа" class="card-icon">
-                    <h3 class="card-title">Напишіть нам</h3>
-                </div>
-                <p class="card-info">adoptme@gmail.com</p>
-                <p class="card-info">meadopt@ukr.net</p>
-            </div>
-        </div>
-        <div class="contact-card">
-            <div class="inner-card">
-                <div class="card-title-row">
-                    <img src="time.png" alt="Іконка годинника" class="card-icon">
-                    <h3 class="card-title">Години роботи</h3>
-                </div>
-                <p class="card-info">Пн-Пт: 08:30 – 16:30</p>
-                <p class="card-info">Сб-Нд: вихідний</p>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="support-block">
-            <h3 class="support-title">Підтримайте нас:</h3>
-            <div class="support-content">
-                <img src="qr.jpg" alt="QR-код для підтримки" class="qr-image">
-                <img src="33.png" alt="Зображення для підтримки" class="support-image">
-            </div>
-        </div>
 <!--футер-->
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="logo.png" alt="Adopt Me Logo" class="logo-img-footer">
-            <div class="logo-text">
-                <span>Дім, що чекає на</span>
-                <span>свого друга</span>
+ <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Adopt Me Logo" class="logo-img-footer">
+                <div class="logo-text">
+                    <span>Дім, що чекає на</span>
+                    <span>свого друга</span>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 adoptme</p>
             </div>
         </div>
-        <div class="footer-copyright">
-            <p>© 2025 adoptme</p>
-        </div>
-    </div>
-</footer>
-<!--кошик-->
-<div id="favoritesModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <div class="modal-header">
-            <h3>Обрані тварини</h3>
-        </div>
-        <div id="favoritePetsContainer" class="favorite-pets-container">
+    </footer>
+    <!--кошик-->
+    <div id="favoritesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h3>Обрані тварини</h3>
             </div>
-        <div id="adoptBtnContainer" style="text-align: center; margin-top: 20px;">
-            <button id="adoptPetBtn" class="adopt-pet-btn">Прихистити</button>
+            <div id="favoritePetsContainer" class="favorite-pets-container">
+            </div>
+            <div id="adoptBtnContainer" style="text-align: center; margin-top: 20px;">
+                <button id="adoptPetBtn" class="adopt-pet-btn">Прихистити</button>
+            </div>
+            <form id="adoptionForm" class="adoption-form" style="display: none;">
+                <h4>Форма заяви на прихисток</h4>
+                <input type="text" id="adopterName" placeholder="Ім'я" required>
+                <input type="text" id="adopterSurname" placeholder="Прізвище" required>
+                <input type="tel" id="adopterPhone" placeholder="Телефон" required inputmode="numeric" pattern="^0[0-9]{9}$">
+                <button type="submit" class="submit-adoption-btn">Подати заяву</button>
+                <button type="button" id="backToFavoritesBtn" class="back-to-favorites-btn">Назад</button>
+            </form>
         </div>
-        <form id="adoptionForm" class="adoption-form" style="display: none;">
-            <h4>Форма заяви на прихисток</h4>
-            <input type="text" id="adopterName" placeholder="Ім'я" required>
-            <input type="text" id="adopterSurname" placeholder="Прізвище" required>
-            <input type="tel" id="adopterPhone" placeholder="Телефон" required inputmode="numeric" pattern="^0[0-9]{9}$">
-            <button type="submit" class="submit-adoption-btn">Подати заяву</button>
-            <button type="button" id="backToFavoritesBtn" class="back-to-favorites-btn">Назад</button>
-        </form>
     </div>
-</div>
    <script>
-// Донат
+    // Донат
         const supportBtn = document.getElementById("supportBtn");
         const donationModal = document.getElementById("donationModal");
         const closeDonat = donationModal.querySelector(".close-btn");
@@ -635,7 +643,55 @@
             initializeHearts();
             renderReviews();
         });
+/*==============================================================*/
+// Додайте цей JavaScript для бургер-меню
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        // Закриття меню при кліку на посилання
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+// Оптимізація для мобільних пристроїв - запобігання масштабуванню при фокусі
+document.addEventListener('DOMContentLoaded', function() {
+    let viewport = document.querySelector('meta[name="viewport"]');
+    
+    if (viewport) {
+        function preventZoom() {
+            viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+            setTimeout(function() {
+                viewport.content = 'width=device-width, initial-scale=1.0';
+            }, 300);
+        }
+        
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', preventZoom);
+        });
+    }
+});
+// Плавна прокрутка для всіх браузерів
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 70,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 </script>
 </body>
-
 </html>
